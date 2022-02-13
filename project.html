@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+ <html>
+   <head>
+    <title>O mnie</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+    <meta name="description" content="Strona o mnie na zajęcia www">
+    <meta name="keywords" content="WWW;AGH">
+    <meta name="author" content="AAZ">
+    <link rel="stylesheet" href="styles.css">
+   </head>
+   <body onload="menu('about')">
+      <header>
+        <h2 class="title">Agnieszka Abgaro Zachariasiewicz</h2>
+      </header>
+      <section class="main-section">
+        <nav class="menu">
+          <ul class="list">
+            <li><button onclick="menu('about')">O mnie</button></li>
+            <li><button onclick="menu('hobby')">Hobby</li>
+            <li><button onclick="menu('other')">Inne</button></li>
+            <li><button onclick="menu('poem')">Wiersz</button></li>
+            <li><button onclick="menu('contact')">Kontakt</button></li>
+          </ul>
+        </nav>
+
+        <article>
+          <div id="about" class="main">
+            <h3>O mnie</h3>
+            <p>Cześć, nazywam się Agnieszka Abgaro Zachariasiewicz. Zapraszam na moją stronę.</p>
+
+            <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/yrVMI3ynggo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+
+          <div id="hobby" class="main">
+            <h3>Moje hobby</h3>
+            <div class="hobby">
+
+              <img src="https://img.redro.pl/obrazy/yoga-poses-for-yoga-at-home-in-concept-of-yoga-moon-salutation-in-flat-design-woman-exercising-for-body-stretching-set-of-yoga-posture-or-asana-infographic-vector-flat-cartoon-illustration-700-206673783.jpg">
+              <img src="https://skimagazyn.pl/wp-content/uploads/2021/10/Gemeinsam-eine-tolle-Abfahrt-geniesen-%C2%A9-Salzburger-Sportwelt-Michael-Groessinger-1050x700.jpg">
+              <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/professional-female-cyclist-on-the-road-royalty-free-image-1594045093.jpg?crop=0.669xw:1.00xh;0.0780xw,0&resize=640:*">
+              <img src="https://632297.smushcdn.com/902994/wp-content/uploads/2019/05/4.-Czerwone-Wierchy-and-Kasprowy-768x512.jpg?lossy=1&strip=1&webp=1">
+              <img src="https://asa.com/wordpress/wp-content/uploads/2019/06/news-2019-7-1-summer-sailing.jpg">
+              <img src="https://images2.minutemediacdn.com/image/upload/c_crop,h_1125,w_2000,x_0,y_29/v1557336494/shape/mentalfloss/582807-steevy84-istock-456906257.jpg?itok=MkXqP1of">
+              <img src="https://lmimirror3pvr.azureedge.net/static/media/18461/c6c04064-686b-4583-a9c8-264bee129ccc/training-load-960x540.jpg">
+            </div>
+          </div>
+
+          <div id="other" class="main">
+            <h3>Inne</h3>
+            <p>Zapraszam na mojego githuba: <a href="https://github.com/AgnieszkaAbgaroZachariasiewicz" target="_blank">tutaj</a></p>
+          </div>
+
+          <div id="poem" class="main">
+            <h3>Wiersz</h3>
+            <h4>Wielkie to szczęście</h4>
+            <p>
+              Wielkie to szczęście<br>
+              nie wiedzieć dokładnie,<br>
+              na jakim świecie się żyje.<br><br>
+
+              Trzeba by było<br>
+              istnieć bardzo długo,<br>
+              stanowczo dłużej<br>
+              niż istnieje on.<br><br>
+
+              Choćby dla porównania<br>
+              poznać inne światy.<br><br>
+
+              unieść się ponad ciało<br>
+              które niczego tak dobrze nie umie,<br>
+              jak ograniczać<br>
+              i stwarzać trudności.<br><br>
+
+              Dla dobra badań,<br>
+              jasności obrazu<br>
+              i ostatecznych wniosków<br>
+              wzbić się ponad czas,<br>
+              w którym to wszystko pędzi i wiruje.<br><br>
+
+              Z tej perspektywy<br>
+              żegnajcie na zawsze<br>
+              szczegóły i epizody.<br><br>
+
+              Liczenie dni tygodnia<br>
+              musiałoby się wydawać<br>
+              czynnością bez sensu,<br>
+              wrzucenie listu do skrzynki<br>
+              wybrykiem głupiej młodości,<br><br>
+
+              napis “Nie deptać trawy”<br>
+              napisem szalonym.<br><br>
+
+              <em>(Koniec i początek, 1993, Wisława Szymborska)</em>
+            </p>
+          </div>
+
+          <div id="contact" class="main">
+            <h3>Kontakt</h3>
+            <p>Jeżeli chcesz się ze mną skontaktować - wypełnij formularz!</p>
+
+            <form class="form-contact" action="mailto:azachari@student.agh.edu.pl" method="post">
+              <label for="contact-mail">E-mail:</label><br>
+              <input type="text" id="contact-mail" name="contact-mail" placeholder="Your email"><br>
+              <label for="contact-text">Treść:</label><br>
+              <textarea id="contact-text" name="contact-text" placeholder="Type here..." class="contact-text"></textarea><br>
+              <button type="submit">Wyślij</button>
+            </form>
+          </div>
+        </article>
+      </section>
+
+      <footer>
+        Autor: Agnieszka Abgaro Zachariasiewicz
+      </footer>
+
+      <script type="text/javascript">
+        function menu(section){
+          var main = document.getElementsByClassName("main")
+
+          for (let m of main){
+            m.style.display = "none"
+          }
+          var current_item = document.getElementById(section)
+          current_item.style.display = "block"
+        }
+      </script>
+   </body>
+</html>
